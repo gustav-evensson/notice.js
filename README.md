@@ -6,7 +6,7 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 
 ### Using the vanilla JS version
 
-1. Copy the notice folder containing the notice.js and notice.css files. 
+1. Copy the [notice](https://github.com/gustav-evensson/notice.js/tree/main/notice) folder containing the notice.js and notice.css files. 
 2. Import the files in your HTML file.
 3. Add a div with the id of "notice-container".(Optionally add classes to customize position and styling, see customizations).
 
