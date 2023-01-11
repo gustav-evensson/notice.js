@@ -18,3 +18,8 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 ```
 <button onclick="createNotice('Passwords does not match', 'error')">Create notice</button>
 ```
+
+### Using the Vue.js component
+
+1. Copy and add the component file to your vue project.
+2. 
