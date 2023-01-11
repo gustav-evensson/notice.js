@@ -10,12 +10,12 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 2. Import the files in your HTML file.
 3. Add a div with the id of "notice-container".(Optionally add classes to customize position and styling, see [customizations](https://github.com/gustav-evensson/notice.js#customization)).
 
-```
+```html
 <div id="notice-container" class="top-center"></div>
 ```
 
 4. Now you can use the createNotice() function anywhere in your code to send a notification.
-```
+```html
 <button onclick="createNotice('Passwords does not match', 'error')">Create notice</button>
 ```
 
@@ -24,12 +24,12 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 1. Copy and add the [component file](https://github.com/gustav-evensson/notice.js/blob/main/vue/noticeComponent.vue) to your vue project.
 2. Import the component to your parent file.
 3. To call the createNotice() function from the parent the best way is to create a ref on the child component and then point to the function on that ref.
-```
+```vue
 <notice-component ref="noticeContainer" class="dark bottom-center"/>
 <button @click="$refs.noticeContainer.createNotice('test from parent', 'alert', 'persisted')">Create Notice</button>
 ```
 You can also access the ref from the script part of the parent file if you want to do something more thn just send th notification.
-```
+```js
 const noticeContainer = ref()
 
 function sendNotice(){
@@ -44,7 +44,7 @@ function sendNotice(){
 
 You can customize the notification using the class attribute on the container div.
 
-```
+```html
 <div id="notice-container" class="..."></div>
 ```
 
@@ -69,7 +69,7 @@ The rounded class gives the notification completely rounded edges.
 
 The function createNotice() can take 3 arguments. 
 
-```
+```js
 createNotice(Arg1, Arg2, Arg3)
 ```
 
@@ -83,12 +83,12 @@ createNotice(Arg1, Arg2, Arg3)
 3. The third argument is the duration, it defaults to 3000 wich is the value in ms. It can take a number value or the string value of *"persisted"*. The persisted value adds a close button to the notification and the notification will then stay untill the button is clicked.
 
 
-```
+```js
 createNotice("Hello from NoticeJS", "alert") // Defaults to 3000ms
 ```
-```
+```js
 createNotice("Hello from NoticeJS", "alert", 2000) // Duration of 2000ms
 ```
-```
-createNotice("Hello from NoticeJS", "alert", "persisted) // Duration persisted
+```js
+createNotice("Hello from NoticeJS", "alert", "persisted") // Duration persisted
 ```
