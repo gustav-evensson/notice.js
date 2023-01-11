@@ -10,6 +10,8 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 2. Import the files in your HTML file.
 3. Add a div with the id of "notice-container".(Optionally add classes to customize position and styling, see customizations).
 
-<code><div id="notice-container" class="top-center"></div></code>
+```
+<div id="notice-container" class="top-center"></div>
+```
 
 4. Now you can use the createNotice() function anywhere in your code to send a notification.
