@@ -21,5 +21,19 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 
 ### Using the Vue.js component
 
-1. Copy and add the component file to your vue project.
-2. 
+1. Copy and add the [component file](https://github.com/gustav-evensson/notice.js/blob/main/vue/noticeComponent.vue) to your vue project.
+2. Import the component to your parent file.
+3. To call the createNotice() function from the parent the best way is to create a ref on the child component and then point to the function on that ref.
+```
+<notice-component ref="noticeContainer" class="dark bottom-center"/>
+<button @click="$refs.noticeContainer.createNotice('test from parent', 'alert', 'persisted')">Create Notice</button>
+```
+You can also access the ref from the script part of the parent file if you want to do something more thn just send th notification.
+```
+const noticeContainer = ref()
+
+function sendNotice(){
+  // Do before notification
+  noticeContainer.value.createNotice('test from parent', 'alert', 'persisted')
+}
+```
