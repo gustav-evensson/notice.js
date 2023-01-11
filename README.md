@@ -74,12 +74,11 @@ createNotice(Arg1, Arg2, Arg3)
 ```
 
 1. The first argument is the text content of the notification, what the notification should say.
-2. The second argument is the type of notification. There are 4 options wich changes the icon of the notification. The options are:
+2. The second argument is the type of notification. There are 4 options wich changes the icon of the notification. This argument defaults to alert if nothing else is provided. The options are:
    * error
    * warning
    * success
    * alert
-   This argument defaults to alert if nothing else is provided
 3. The third argument is the duration, it defaults to 3000 wich is the value in ms. It can take a number value or the string value of *"persisted"*. The persisted value adds a close button to the notification and the notification will then stay untill the button is clicked.
 
 
