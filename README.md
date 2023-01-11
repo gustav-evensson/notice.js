@@ -15,3 +15,6 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 ```
 
 4. Now you can use the createNotice() function anywhere in your code to send a notification.
+```
+<button onclick="createNotice('Passwords does not match', 'error')">Create notice</button>
+```
