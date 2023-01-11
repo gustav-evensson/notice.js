@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./notice/notice.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div id="notice-container" class="bottom-center"></div>
+    <div class="container">
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="passwordCheck" placeholder="Password Check">
+        <button  onclick="singUpUser()">Sign Up</button>
+    </div>
+    <script src="./notice/notice.js"></script>
+    <script>
+        var emailForamt = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+        function singUpUser(){
+            var email = document.getElementById('email').value
+            var password = document.getElementById('password').value
+            var passwordCheck = document.getElementById('passwordCheck').value
+            if(!emailForamt.test(email)){
+                createNotice('Your email is invalid', 'error', 'persisted') //Using Notice.js to create an error notification with persisted duration
+                return
+            }
+            if(password != passwordCheck){
+                createNotice('Passwords does not match', 'error') //Using Notice.js to create an error notification
+                return
+            }
+            if(password.length <= 6){
+                createNotice('Password is weak', 'warning') //Using Notice.js to create an warning notification
+                return
+            }
+            createNotice('User created', 'success') //Using Notice.js to create an success notification
+        }
+    </script>
+</body>
+</html>

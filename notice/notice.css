@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+#notice-container {
+  --wall-gap: 10px;
+  position: fixed;
+  top: var(--wall-gap);
+  left: var(--wall-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#notice-container.top-left {
+  flex-direction: column-reverse;
+}
+
+#notice-container.top-center {
+  left: 50%;
+  translate: -50% 0;
+  flex-direction: column-reverse;
+}
+
+#notice-container.top-right {
+  left: unset;
+  right: var(--wall-gap);
+  flex-direction: column-reverse;
+}
+
+#notice-container.bottom-left {
+  top: unset;
+  bottom: var(--wall-gap);
+}
+
+#notice-container.bottom-center {
+  top: unset;
+  bottom: var(--wall-gap);
+  left: 50%;
+  translate: -50% 0;
+}
+
+#notice-container.bottom-right {
+  left: unset;
+  top: unset;
+  bottom: var(--wall-gap);
+  right: var(--wall-gap);
+}
+
+#notice-container .notification {
+  background-color: #eeeeee;
+  color: #000000;
+  box-shadow: 0px 16px 34px -7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 300px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  opacity: 0;
+  translate: 0 -100%;
+  transition: opacity 300ms, translate 300ms;
+}
+#notice-container .notification .notification-icon {
+  height: 36px;
+  width: 36px;
+  min-width: 36px;
+}
+#notice-container .notification .notification-icon svg {
+  width: 100%;
+  height: 100%;
+}
+#notice-container .notification .notification-text {
+  width: 100%;
+}
+#notice-container .notification .notification-close {
+  cursor: pointer;
+}
+#notice-container .notification.show {
+  opacity: 1;
+  translate: 0 0;
+}
+
+#notice-container.dark .notification {
+  background-color: #303030;
+  color: #FFFFFF;
+}
+#notice-container.dark .notification-close svg path {
+  stroke: #FFFFFF;
+}
+
+#notice-container.rounded .notification {
+  border-radius: 50px;
+}
+
+#notice-container.bottom-right .notification, #notice-container.bottom-center .notification, #notice-container.bottom-left .notification {
+  translate: 0 100%;
+}
+#notice-container.bottom-right .notification.show, #notice-container.bottom-center .notification.show, #notice-container.bottom-left .notification.show {
+  opacity: 1;
+  translate: 0 0;
+}
