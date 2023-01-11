@@ -25,6 +25,9 @@ Download the notice.tar.gz file <a href="https://github.com/gustav-evensson/noti
 ### Using the Vue.js component
 
 1. Copy and add the [component file](https://github.com/gustav-evensson/notice.js/blob/main/vue/noticeComponent.vue) to your vue project.
+
+Download the vue.tar.gz file <a href="https://github.com/gustav-evensson/notice.js/blob/main/vue.tar.gz?raw=true" download>here</a>
+
 2. Import the component to your parent file.
 3. To call the createNotice() function from the parent the best way is to create a ref on the child component and then point to the function on that ref.
 ```vue
