@@ -87,8 +87,8 @@ createNotice(Arg1, Arg2, Arg3)
 createNotice("Hello from NoticeJS", "alert") // Defaults to 3000ms
 ```
 ```
-createNotice("Hello from NoticeJS", "alert", 2000)
+createNotice("Hello from NoticeJS", "alert", 2000) // Duration of 2000ms
 ```
 ```
-createNotice("Hello from NoticeJS", "alert", "persisted)
+createNotice("Hello from NoticeJS", "alert", "persisted) // Duration persisted
 ```
