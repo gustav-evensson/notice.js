@@ -1,20 +1,20 @@
 <script setup>
-import { ref } from 'vue' 
 import noticeComponent from './components/noticeComponent.vue';
 
-const noticeContainer = ref()
+// import { ref } from 'vue' 
+// const noticeContainer = ref()
 
-function sendNotice(){
-  noticeContainer.value.createNotice('test from parent', 'error', 5000)
-}
+// function sendNotice(){
+//   noticeContainer.value.createNotice('Hello from parent', 'error', 5000)
+// }
 
 </script>
 
 <template>
   <div class="home">
     <notice-component ref="noticeContainer" class="top-right"/>
-    <button @click="sendNotice()">Create Notice Function</button>
-    <!-- <button @click="$refs.noticeContainer.createNotice('test from parent', 'alert', 'persisted')">Create Notice</button> -->
+    <button @click="$refs.noticeContainer.createNotice('Hello from parent', 'alert', 'persisted')">Create Notice</button>
+    <!-- <button @click="sendNotice()">Create Notice Function</button> -->
   </div>
 </template>
 
