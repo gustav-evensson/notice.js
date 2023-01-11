@@ -81,3 +81,14 @@ createNotice(Arg1, Arg2, Arg3)
    * alert
    This argument defaults to alert if nothing else is provided
 3. The third argument is the duration, it defaults to 3000 wich is the value in ms. It can take a number value or the string value of *"persisted"*. The persisted value adds a close button to the notification and the notification will then stay untill the button is clicked.
+
+
+```
+createNotice("Hello from NoticeJS", "alert") // Defaults to 3000ms
+```
+```
+createNotice("Hello from NoticeJS", "alert", 2000)
+```
+```
+createNotice("Hello from NoticeJS", "alert", "persisted)
+```
