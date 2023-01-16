@@ -1,0 +1,19 @@
+#notice-container {
+  --light-error-color: #E23535;
+  --light-warning-color: #FF7A00;
+  --light-success-color: #0BA808;
+  --light-alert-color: #2B5EE1;
+  
+  --dark-error-color: #D64747;
+  --dark-warning-color: #D27722;
+  --dark-success-color: #0BA808;
+  --dark-alert-color: #5274CA;
+
+  --light-background-color: #ffffff;
+  --dark-background-color: #303030;
+
+  --light-text-color: #000000;
+  --dark-text-color: #FFFFFF;
+
+  --wall-gap: 10px;
+}

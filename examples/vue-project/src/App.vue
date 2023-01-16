@@ -1,20 +1,20 @@
 <script setup>
 import noticeComponent from './components/noticeComponent.vue';
 
-// import { ref } from 'vue' 
-// const noticeContainer = ref()
+import { ref } from 'vue' 
+const noticeContainer = ref()
 
-// function sendNotice(){
-//   noticeContainer.value.createNotice('Hello from parent', 'error', 5000)
-// }
+function sendNotice(){
+  noticeContainer.value.createNotice('Hello from parent', 'error', 5000)
+}
 
 </script>
 
 <template>
   <div class="home">
-    <notice-component ref="noticeContainer" class="top-right"/>
-    <button @click="$refs.noticeContainer.createNotice('Hello from parent', 'alert', 'persisted')">Create Notice</button>
-    <!-- <button @click="sendNotice()">Create Notice Function</button> -->
+    <notice-component ref="noticeContainer" class="top-right slide-left"/>
+    <!-- <button @click="$refs.noticeContainer.createNotice('Hello from parent', 'alert', 'persisted')">Create Notice</button> This show the ability to call the function directly from a button --> 
+    <button @click="sendNotice()">Create Notice Function</button>
   </div>
 </template>
 
