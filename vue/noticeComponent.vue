@@ -103,8 +103,7 @@ defineExpose({ createNotice });
 </template>
 
 <style>
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); */
-:root {
+#notice-container {
 	--light-error-color: #e23535;
 	--light-warning-color: #ff7a00;
 	--light-success-color: #0ba808;
@@ -122,9 +121,7 @@ defineExpose({ createNotice });
 	--dark-text-color: #ffffff;
 
 	--wall-gap: 10px;
-}
 
-#notice-container {
 	position: fixed;
 	top: var(--wall-gap);
 	left: var(--wall-gap);
