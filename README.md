@@ -31,17 +31,24 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 2. Import the component to your parent file.
 3. To call the createNotice() function from the parent the best way is to create a ref on the child component and then point to the function on that ref.
 ```vue
-<notice-component ref="noticeContainer" class="dark bottom-center"/>
-<button @click="$refs.noticeContainer.createNotice('test from parent', 'alert', 'persisted')">Create Notice</button>
-```
-You can also access the ref from the script part of the parent file if you want to do something more thn just send th notification.
-```js
+<script setup>
+import noticeComponent from './components/noticeComponent.vue';
+
+import { ref } from 'vue' 
 const noticeContainer = ref()
 
 function sendNotice(){
-  // Do before notification
-  noticeContainer.value.createNotice('test from parent', 'alert', 'persisted')
+  noticeContainer.value.createNotice('Hello from parent', 'error', 5000)
 }
+
+</script>
+
+<template>
+  <div class="home">
+    <notice-component ref="noticeContainer" class="top-right slide-left"/>
+    <button @click="sendNotice()">Create Notice Function</button>
+  </div>
+</template>
 ```
 
 ## Customization
@@ -64,6 +71,13 @@ To change the position of the notifications you have 6 options.
 4. bottom-left
 5. bottom-middle
 6. bottom-right
+
+To chanfe the way the notification slides in u can add th classes:
+
+1. slide-left
+2. slide-right
+3. slide-up
+4. slide-down
 
 There is also the options of adding the classes *dark* and *rounded*;
 
