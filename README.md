@@ -72,7 +72,7 @@ To change the position of the notifications you have 6 options.
 5. bottom-middle
 6. bottom-right
 
-To chanfe the way the notification slides in u can add th classes:
+To chanfe the way the notification slides in you can add the classes:
 
 1. slide-left
 2. slide-right
