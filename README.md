@@ -116,4 +116,6 @@ createNotice("Hello from NoticeJS", "alert", "persisted") // Duration persisted
 
 If you want more comtomization you can with the CSS varaibles change the color and also the wall gap of the notification.
 
-**In vanillaJS the varaibles are located in a seperate "variables.css" file**
+In vanillaJS the varaibles are located in a seperate [varaibles.css](https://github.com/gustav-evensson/notice.js/blob/main/notice/variables.css) file.
+
+Where as in the vue component the variables are located in the style tag of the component.
