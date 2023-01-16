@@ -111,3 +111,9 @@ createNotice("Hello from NoticeJS", "alert", 2000) // Duration of 2000ms
 ```js
 createNotice("Hello from NoticeJS", "alert", "persisted") // Duration persisted
 ```
+
+### CSS variables
+
+If you want more comtomization you can with the CSS varaibles change the color and also the wall gap of the notification.
+
+**In vanillaJS the varaibles are located in a seperate "variables.css" file**
