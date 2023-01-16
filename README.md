@@ -72,6 +72,13 @@ To change the position of the notifications you have 6 options.
 5. bottom-middle
 6. bottom-right
 
+To chanfe the way the notification slides in u can add th classes:
+
+1. slide-left
+2. slide-right
+3. slide-up
+4. slide-down
+
 There is also the options of adding the classes *dark* and *rounded*;
 
 The dark class gives the notifications a dark theme
