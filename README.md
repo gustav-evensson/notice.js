@@ -31,17 +31,24 @@ Notice.js is a very simple notification library built with JS and CSS. It provid
 2. Import the component to your parent file.
 3. To call the createNotice() function from the parent the best way is to create a ref on the child component and then point to the function on that ref.
 ```vue
-<notice-component ref="noticeContainer" class="dark bottom-center"/>
-<button @click="$refs.noticeContainer.createNotice('test from parent', 'alert', 'persisted')">Create Notice</button>
-```
-You can also access the ref from the script part of the parent file if you want to do something more thn just send th notification.
-```js
+<script setup>
+import noticeComponent from './components/noticeComponent.vue';
+
+import { ref } from 'vue' 
 const noticeContainer = ref()
 
 function sendNotice(){
-  // Do before notification
-  noticeContainer.value.createNotice('test from parent', 'alert', 'persisted')
+  noticeContainer.value.createNotice('Hello from parent', 'error', 5000)
 }
+
+</script>
+
+<template>
+  <div class="home">
+    <notice-component ref="noticeContainer" class="top-right slide-left"/>
+    <button @click="sendNotice()">Create Notice Function</button>
+  </div>
+</template>
 ```
 
 ## Customization
