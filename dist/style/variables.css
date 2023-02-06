@@ -1,0 +1,15 @@
+#notice-container {
+  
+  --error-color: #D64747;
+  --warning-color: #D27722;
+  --success-color: #0BA808;
+  --alert-color: #5274CA;
+
+  --light-background-color: #ffffff;
+  --dark-background-color: #303030;
+
+  --light-text-color: #000000;
+  --dark-text-color: #FFFFFF;
+
+  --wall-gap: 10px;
+}

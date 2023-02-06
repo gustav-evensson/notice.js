@@ -7,9 +7,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100%;
 	gap: 10px;
 	font-family: 'Montserrat', sans-serif;
+	z-index: 999999;
 	* {
 		margin: 0;
 		padding: 0;
@@ -40,6 +40,7 @@
 #notice-container.bottom-left {
 	top: unset;
 	bottom: var(--wall-gap);
+	left: var(--wall-gap);
 }
 
 #notice-container.bottom-center {
@@ -62,25 +63,25 @@
 	box-shadow: 0px 16px 34px -7px rgba(0, 0, 0, 0.25);
 	border-radius: 6px;
 	padding: 18px;
-    // min-width: 300px;
+	min-width: 300px;
 	width: fit-content;
 	display: flex;
 	align-items: center;
-    justify-content: space-between;
+	justify-content: space-between;
 	gap: 18px;
 	overflow: hidden;
 	opacity: 0;
 	translate: 0 -100%;
 	margin-inline: var(--wall-gap);
 	transition: opacity 300ms, translate 300ms;
-    .notification-icon{
-        width: 34px;
-        height: 34px;
-    }
+	.notification-icon {
+		width: 34px;
+		height: 34px;
+	}
 	p {
 		font-size: 24px;
 		font-weight: 300;
-        width: 100%;
+		width: 100%;
 		min-width: min-content;
 	}
 	.notification-close-icon {
@@ -122,6 +123,55 @@
 		background-color: var(--dark-text-color);
 	}
 }
+#notice-container.colorfull {
+	.notification{
+		color: var(--dark-text-color);
+		.notification-icon {
+			svg{
+				path {
+					stroke: var(--dark-text-color);
+				}
+				.fill{
+					fill: var(--dark-text-color);
+					stroke: transparent;
+				}
+			} 
+		}
+		.notification-close-icon {
+			svg path {
+				stroke: var(--dark-text-color);
+			}
+		}
+		.notification-close-icon::before {
+			background-color: var(--dark-text-color);
+		}
+	}
+	.notification.error{
+		background-color: var(--error-color);
+	}
+	.notification.warning{
+		background-color: var(--warning-color);
+	}
+	.notification.success{
+		background-color: var(--success-color);
+	}
+	.notification.alert{
+		background-color: var(--alert-color);
+	}
+}
+#notice-container.glass .notification{
+	background: linear-gradient(91.45deg, #fafafa38 0%, #fafafa1c 100%);
+	backdrop-filter: blur(17px);
+	border: 1px solid #ffffff24;
+	.notification-icon{
+		filter: brightness(1.2);
+	}
+}
+#notice-container.glass.dark .notification{
+	background: linear-gradient(91.45deg, rgba(0, 0, 0, 0.1) 0%, #0000000d 100%);
+	backdrop-filter: blur(17px);
+	border: 1px solid #ffffff24;
+}
 #notice-container.bottom-right .notification,
 #notice-container.bottom-center .notification,
 #notice-container.bottom-left .notification {
@@ -147,4 +197,10 @@
 #notice-container .notification.show {
 	opacity: 1;
 	translate: 0 0;
+}
+
+@media screen and (max-width: 500px){
+	#notice-container .notification{
+		min-width: unset;
+	}
 }
