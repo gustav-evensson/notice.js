@@ -5,10 +5,10 @@ class Notice {
 		const noticeContainer = document.createElement('div');
 		noticeContainer.setAttribute('id', 'notice-container');
 		noticeContainer.classList.add(this.position);
-		if(this.type === 'standard' || this.type === 'glass'){
+		if (this.type === 'standard' || this.type === 'glass') {
 			noticeContainer.classList.add(this.theme);
 		}
-		noticeContainer.classList.add(this.type)
+		noticeContainer.classList.add(this.type);
 		noticeContainer.classList.add(this.animation);
 		document.body.appendChild(noticeContainer);
 	}
@@ -102,6 +102,4 @@ class Notice {
 			);
 		}
 	}
-}
-
-exports.Notice = Notice
+};
